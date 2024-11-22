@@ -82,15 +82,18 @@ inputElement.addEventListener("input", () => {
 })
 
 convertBtn.addEventListener("click", () => {
-        inputValue = Number(inputValue)
-        const meter = convertMeter(inputValue)
-        const feet = convertFeet(inputValue)
-        const liters = convertLiters(inputValue)
-        const gallons = convertGallons(inputValue)
-        const kilograms = convertKilograms(inputValue)
-        const pounds = convertPounds(inputValue)
-    
-        lengthTag.innerHTML = `${inputValue} meters = ${feet} feet | ${inputValue} feet = ${meter} meters`
-        volumeTag.innerHTML = `${inputValue} liters = ${gallons} gallons | ${inputValue} gallons = ${liters} liters`
-        massTag.innerHTML = `${inputValue} kilos = ${pounds} pounds | ${inputValue} pounds = ${kilograms} kilograms`
+  if (isNaN(inputValue)) {
+      return
+  } else {
+    const meter = convertMeter(inputValue)
+    const feet = convertFeet(inputValue)
+    const liters = convertLiters(inputValue)
+    const gallons = convertGallons(inputValue)
+    const kilograms = convertKilograms(inputValue)
+    const pounds = convertPounds(inputValue)
+
+    lengthTag.innerHTML = `${inputValue} meters = ${feet} feet | ${inputValue} feet = ${meter} meters`
+    volumeTag.innerHTML = `${inputValue} liters = ${gallons} gallons | ${inputValue} gallons = ${liters} liters`
+    massTag.innerHTML = `${inputValue} kilos = ${pounds} pounds | ${inputValue} pounds = ${kilograms} kilograms`
+  }
 })
