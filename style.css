@@ -1,28 +1,28 @@
 :root {
-    --primary-color: #6943FF;
-    --primary-text-color: #FFFFFF;
-    --text-convert: #3D3D3D;
+    --primary-color: #6943FF; /* Neon Blue */
+    --primary-text-color: #FFFFFF; /* White */
+    --text-convert: #3D3D3D; /* Charcoal */
 }
 
 [data-theme="dark"] {
-    --secondary-color: #1F2937;
-    --secondary-box-color: #273549;
-    --text-color: #CCC1FF;    
-    --text-small-color: #FFFFFF;
+    --secondary-color: #1F2937; /* Midnight Express */
+    --secondary-box-color: #273549; /* Tarawera */
+    --text-color: #CCC1FF; /* Lavender Blue */
+    --text-small-color: #FFFFFF; /* White */
 }
 
 [data-theme="light"] {    
-    --secondary-color: #F4F4F4;
-    --secondary-box-color: #FFFFFF;
-    --text-color: #5A537B;
-    --text-small-color: #353535;
+    --secondary-color: #F4F4F4; /* White Smoke */
+    --secondary-box-color: #FFFFFF; /* White */
+    --text-color: #5A537B; /* Kimberly */
+    --text-small-color: #353535; /* Gondola */
 }
 
 .theme-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #F4F4F4;
+    background-color: #F4F4F4; /* White Smoke */
     border: none;
     border-radius: 5%;
     padding: 10px;
@@ -46,7 +46,7 @@
   
 .theme-btn .fa-sun {
     display: block;
-    color: #f39c12;
+    color: #976008;
 }
   
 .theme-btn .fa-moon {
@@ -54,7 +54,7 @@
 }
 
 .theme-btn.theme-dark {
-    background-color: #333;
+    background-color: #333; /* Gandola */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
@@ -68,7 +68,7 @@
 
 .theme-btn.theme-dark .fa-moon {
     display: block;
-    color: #F4F4F4;
+    color: #F4F4F4; /* White Smoke */
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -110,6 +110,10 @@ body{
 .input-box h1 {
     font-weight: bolder;
     margin: 20px 0 20px;
+}
+
+.input-box label{
+    font-weight: bolder;
 }
 
 .input-box input{

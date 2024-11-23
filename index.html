@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -11,29 +12,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="theme-btn" type="button" data-theme-toggle aria-label="Change to light theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
+    <button class="theme-btn" type="button" data-theme-toggle aria-live="polite" aria-label="Change to Dark or Light theme" aria-checked="false">
+        <i class="fas fa-sun" alt="Sun icon, visible on light theme"></i>
+        <i class="fas fa-moon" alt="Moon icon, visible on dark theme"></i>
     </button>
 
     <div class="input-box">
         <h1>Metric/Imperial Unit Conversion</h1>
-        <input type="text" id="input-value" autocomplete="off">
+        <label for="input-value">Value:</label>
+        <input type="text" id="input-value" autocomplete="off" aria-label="Enter a value to convert">
         <button id="convert-btn">Convert</button>
     </div>
 
     <div class="convert-box">
         <div class="conversion">
             <h3 class="convert-head">Length (Meter/Feet)</h3>
-            <p id="length"></p>
+            <p id="length" aria-live="polite" aria-relevant="text"></p>
         </div>
         <div class="conversion">
             <h3 class="convert-head">Volume (Liters/Gallons)</h3>
-            <p id="volume"></p>
+            <p id="volume" aria-live="polite" aria-relevant="text"></p>
         </div>
         <div class="conversion">
             <h3 class="convert-head">Mass (Kilograms/Pounds)</h3>
-            <p id="mass"></p>
+            <p id="mass" aria-live="polite" aria-relevant="text"></p>
         </div>
     </div>
     <script src="main.js"></script>
