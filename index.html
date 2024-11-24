@@ -12,32 +12,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="theme-btn" type="button" data-theme-toggle aria-live="polite" aria-label="Change to Dark or Light theme" aria-checked="false">
+    <button class="theme-btn" type="button" data-theme-toggle role="toolbar" aria-live="polite" aria-label="Change to Dark or Light theme" aria-checked="false">
         <i class="fas fa-sun" alt="Sun icon, visible on light theme"></i>
         <i class="fas fa-moon" alt="Moon icon, visible on dark theme"></i>
     </button>
 
-    <div class="input-box">
-        <h1>Metric/Imperial Unit Conversion</h1>
-        <label for="input-value">Value:</label>
-        <input type="text" id="input-value" autocomplete="off" aria-label="Enter a value to convert">
-        <button id="convert-btn">Convert</button>
-    </div>
-
-    <div class="convert-box">
-        <div class="conversion">
-            <h3 class="convert-head">Length (Meter/Feet)</h3>
-            <p id="length" aria-live="polite" aria-relevant="text"></p>
+    <main id="main" role="main" aria-label="Main content">
+        <div class="input-box">
+            <h1>Metric/Imperial Unit Conversion</h1>
+            <label for="input-value">Value:</label>
+            <input type="text" id="input-value" autocomplete="off" aria-label="Enter a value to convert">
+            <button id="convert-btn">Convert</button>
         </div>
-        <div class="conversion">
-            <h3 class="convert-head">Volume (Liters/Gallons)</h3>
-            <p id="volume" aria-live="polite" aria-relevant="text"></p>
+    
+        <div class="convert-box" role="region" aria-label="Conversion results">
+            <div class="conversion">
+                <h3 class="convert-head">Length (Meter/Feet)</h3>
+                <p id="length" aria-live="polite" aria-relevant="text"></p>
+            </div>
+            <div class="conversion">
+                <h3 class="convert-head">Volume (Liters/Gallons)</h3>
+                <p id="volume" aria-live="polite" aria-relevant="text"></p>
+            </div>
+            <div class="conversion">
+                <h3 class="convert-head">Mass (Kilograms/Pounds)</h3>
+                <p id="mass" aria-live="polite" aria-relevant="text"></p>
+            </div>
         </div>
-        <div class="conversion">
-            <h3 class="convert-head">Mass (Kilograms/Pounds)</h3>
-            <p id="mass" aria-live="polite" aria-relevant="text"></p>
-        </div>
-    </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

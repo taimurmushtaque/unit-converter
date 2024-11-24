@@ -96,6 +96,10 @@ input[type=number] {
 
 body{
     font-family: "Inter", serif;
+    height: 100vh;
+}
+
+main{
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -110,6 +114,7 @@ body{
     align-items: center;
     padding: 10px 0;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    flex: 1;
 }
 
 .input-box h1 {
@@ -166,6 +171,7 @@ body{
     flex: 1;
     overflow-y: auto;
     transition: background-color 0.3s ease-in-out;
+    flex: 2;
 }
 
 .conversion{
