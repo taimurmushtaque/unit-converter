@@ -6,11 +6,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("theme") === "dark") {
-    button.classList.add("theme-dark")
+    themeBtn.classList.add("theme-dark")
   }
 })
 
-const button = document.querySelector(".theme-btn")
+const themeBtn = document.querySelector(".theme-btn")
 const localStorageTheme = localStorage.getItem("theme")
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)")
 
@@ -18,12 +18,12 @@ let currentThemeSetting = localStorageTheme || (systemSettingDark.matches ? "dar
 
 document.documentElement.setAttribute("data-theme", currentThemeSetting)
 
-button.addEventListener("click", () => {
+themeBtn.addEventListener("click", () => {
   const newTheme = currentThemeSetting === "dark" ? "light" : "dark"
   localStorage.setItem("theme", newTheme)
   document.documentElement.setAttribute("data-theme", newTheme)
   currentThemeSetting = newTheme
-  button.classList.toggle("theme-dark")
+  themeBtn.classList.toggle("theme-dark")
 })
 
 const inputElement = document.getElementById("input-value")
@@ -78,6 +78,12 @@ inputElement.addEventListener("input", () => {
   if (isNaN(inputValue)) {
     errorElement.textContent = "Please enter a valid number"
     inputElement.parentNode.appendChild(errorElement)
+  }
+})
+
+inputElement.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    convertBtn.click()
   }
 })
 
