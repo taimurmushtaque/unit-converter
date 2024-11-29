@@ -26,6 +26,34 @@ themeBtn.addEventListener("click", () => {
   themeBtn.classList.toggle("theme-dark")
 })
 
+const main = document.getElementById("main")
+function render() {
+  main.innerHTML = `
+    <div class="input-box">
+      <h1>Metric/Imperial Unit Conversion</h1>
+      <label for="input-value">Value:</label>
+      <input type="text" id="input-value" autocomplete="off" aria-label="Enter a value to convert">
+      <button id="convert-btn">Convert</button>
+    </div>
+    <div class="convert-box">
+      <div class="conversion">
+        <h3 class="convert-head">Length (Meter/Feet)</h3>
+        <p id="length" aria-live="polite" aria-relevant="text"></p>
+      </div>
+      <div class="conversion">
+        <h3 class="convert-head">Volume (Liters/Gallons)</h3>
+        <p id="volume" aria-live="polite" aria-relevant="text"></p>
+      </div>
+      <div class="conversion">
+        <h3 class="convert-head">Mass (Kilograms/Pounds)</h3>
+        <p id="mass" aria-live="polite" aria-relevant="text"></p>
+      </div>
+    </div>
+  `
+}
+
+render();
+
 const inputElement = document.getElementById("input-value")
 let inputValue = inputElement.value
 const convertBtn = document.getElementById("convert-btn")
